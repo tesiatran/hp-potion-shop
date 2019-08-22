@@ -1,0 +1,11 @@
+header{
+  height: 10%;
+  width: 30%;
+  font-size: 2em;
+  font-family: 'Lemonada', cursive;
+}
+
+.logo{
+  height: auto;
+  width: 50%;
+}
