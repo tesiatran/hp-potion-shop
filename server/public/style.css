@@ -1,11 +1,14 @@
 header{
-  height: 10%;
-  width: 30%;
   font-size: 2em;
-  font-family: 'Lemonada', cursive;
+  font-family: 'Bungee Shade', cursive;
 }
 
 .logo{
   height: auto;
-  width: 50%;
+  width: 5em;
+  margin: 30px;
+}
+
+.storeName{
+  font-size: 2em;
 }

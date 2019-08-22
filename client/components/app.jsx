@@ -5,7 +5,7 @@ import ProductList from './product-list';
 export default class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <Header text="Wicked Sales"/>
         <ProductList/>
       </div>
