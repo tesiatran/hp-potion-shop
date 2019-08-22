@@ -7,6 +7,4 @@
 
   print($output);
 
-  doStuff();
-
 ?>

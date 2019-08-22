@@ -6,6 +6,8 @@
       "error" => $error->getMessage()
     ];
 
+    http_response_code(500);
+
     $json_output = json_encode($output["error"]);
     print($json_output);
   }
