@@ -1,0 +1,16 @@
+header{
+  font-size: 2em;
+  font-family: 'Bungee Shade', cursive;
+}
+
+.logo{
+  height: auto;
+  width: 5em;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-right: 15px;
+}
+
+.storeName{
+  font-size: 2em;
+}
