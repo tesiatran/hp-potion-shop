@@ -8,6 +8,18 @@ class ProductDetails extends React.Component {
     };
   }
 
+  componentDidMount() {
+    fetch('/api/products.php?id=1')
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        this.setState({
+          product: data
+        });
+      });
+  }
+
   render() {
     return null;
   }
