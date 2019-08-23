@@ -1,5 +1,4 @@
 <?php
-
   require_once "functions.php";
   set_exception_handler("error_handler");
   startup();
@@ -9,7 +8,15 @@
     throw new Exception("ERROR: " . mysqli_connect_error());
   };
 
-  $query = "SELECT * FROM `products`";
+  $id = $_GET["id"];
+
+  if(empty($id)) {
+    $whereClause = "";
+  } else {
+    $whereClause = "WHERE `id`={$id}";
+  };
+
+  $query = "SELECT * FROM `products`" . $whereClause;
 
   $result = mysqli_query($conn, $query);
 
