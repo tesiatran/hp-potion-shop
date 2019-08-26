@@ -14,6 +14,9 @@
     $whereClause = "";
   } else {
     $whereClause = "WHERE `id`={$id}";
+    if(!is_numeric($id)) {
+      throw new Exception("The id needs to be a number.");
+    }
   };
 
   $query = "SELECT * FROM `products`" . $whereClause;
@@ -23,6 +26,12 @@
   if(!$result) {
     throw new Exception("ERROR: " . mysqli_error($conn));
     exit();
+  }
+
+  $rows = mysqli_num_rows($result);
+
+  if(!$rows) {
+    throw new Exception("Invalid ID: {$id}");
   }
 
   $output = [
