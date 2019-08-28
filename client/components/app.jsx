@@ -71,7 +71,7 @@ export default class App extends React.Component {
     } else {
       return (
         <div className="container">
-          <Header text="Wicked Sales"/>
+          <Header text="Wicked Sales" cartItemCount={this.state.cart.length}/>
           <ProductDetails setView={this.setView} viewParams={this.state.view.params} backText="<Back to catalog" addText="Add to Cart" addToCart={this.addToCart}/>
         </div>
       );
