@@ -28,7 +28,7 @@ class ProductDetails extends React.Component {
         <div className="container">
           <div onClick={() => {
             this.props.setView('catalog', {});
-          }}>{this.props.text} </div>
+          }}>{this.props.backText} </div>
           <div className="row">
             <img src={this.state.product.image} className="col my-3"></img>
             <div className="col">
@@ -40,6 +40,9 @@ class ProductDetails extends React.Component {
               </div>
               <div className="row">
                 <div className="col justify-content-start my-3">{this.state.product.shortDescription}</div>
+              </div>
+              <div className="row">
+                <button className="col justify-content-start my-3">{this.props.addText}</button>
               </div>
             </div>
           </div>
