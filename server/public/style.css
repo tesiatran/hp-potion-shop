@@ -18,3 +18,8 @@ header{
 .productName{
   font-size: 2em;
 }
+
+.cart{
+  font-size: 0.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
