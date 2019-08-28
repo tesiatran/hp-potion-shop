@@ -42,7 +42,7 @@ class ProductDetails extends React.Component {
                 <div className="col justify-content-start my-3">{this.state.product.shortDescription}</div>
               </div>
               <div className="row">
-                <button className="col justify-content-start my-3" onClick={this.props.addToCart}>{this.props.addText}</button>
+                <button className="col justify-content-start my-3" onClick={() => { this.props.addToCart(this.state.product); }}>{this.props.addText}</button>
               </div>
             </div>
           </div>
