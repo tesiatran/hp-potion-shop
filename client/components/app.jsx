@@ -14,18 +14,23 @@ export default class App extends React.Component {
       cart: []
     };
     this.setView = this.setView.bind(this);
+    this.addToCart = this.addToCart.bind(this);
   }
 
   addToCart(product) {
     fetch('/api/cart.php', {
-      method: 'POST'
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(product)
     })
       .then(response => {
         return response.json();
       })
       .then(data => {
         this.setState({
-          cart: this.state.cart.push(product)
+          cart: this.state.cart.concat(data)
         });
       });
   }
@@ -67,7 +72,7 @@ export default class App extends React.Component {
       return (
         <div className="container">
           <Header text="Wicked Sales"/>
-          <ProductDetails setView={this.setView} view={this.state.view.params} backText="<Back to catalog" addText="Add to Cart"/>
+          <ProductDetails setView={this.setView} viewParams={this.state.view.params} backText="<Back to catalog" addText="Add to Cart" addToCart={this.addToCart}/>
         </div>
       );
     }

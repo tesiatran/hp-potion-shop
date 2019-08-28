@@ -9,7 +9,7 @@ class ProductDetails extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/products.php?id=' + this.props.view.id)
+    fetch('/api/products.php?id=' + this.props.viewParams.id)
       .then(response => {
         return response.json();
       })
@@ -42,7 +42,7 @@ class ProductDetails extends React.Component {
                 <div className="col justify-content-start my-3">{this.state.product.shortDescription}</div>
               </div>
               <div className="row">
-                <button className="col justify-content-start my-3">{this.props.addText}</button>
+                <button className="col justify-content-start my-3" onClick={this.props.addToCart}>{this.props.addText}</button>
               </div>
             </div>
           </div>
