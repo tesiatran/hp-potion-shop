@@ -1,9 +1,16 @@
 import React from 'react';
 import CartSummaryItem from './cart-summary-item';
 
-function CartSummary() {
+function CartSummary(props) {
   return (
-    <CartSummaryItem/>
+    <div className="container">
+      <div onClick={() => {
+        this.props.setView('catalog', {});
+      }}>{props.backText}</div>
+      <div>My Cart</div>
+      <CartSummaryItem cartItemData={props.cartTotalData}/>
+      <div>Total</div>
+    </div>
   );
 }
 

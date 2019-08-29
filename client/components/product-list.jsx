@@ -28,7 +28,10 @@ class ProductList extends React.Component {
       <div className="row justify-content-center">
         {this.state.products.map(product => {
           return (
-            <ProductListItem key={product.id} productData={product} setView={this.props.setView}/>
+            <ProductListItem
+              key={product.id}
+              productData={product}
+              setView={this.props.setView}/>
           );
         })}
       </div>
