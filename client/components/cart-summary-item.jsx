@@ -3,9 +3,6 @@ import React from 'react';
 function CartSummaryItem(props) {
   return (
     <div className="container">
-      <div onClick={() => {
-        props.setView('catalog', {});
-      }}>{props.backText}</div>
       <div className="row">
         <img src={props.cartItemData.image} className="col my-3"></img>
         <div className="col">

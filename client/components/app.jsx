@@ -85,7 +85,7 @@ export default class App extends React.Component {
       return (
         <div className="container">
           <Header text="Wicked Sales" cartItemCount={this.state.cart.length} setView={this.setView}/>
-          <CartSummary cartTotalData={this.state.cart}/>
+          <CartSummary cartTotalData={this.state.cart} setView={this.setView} backText="<Back to catalog"/>
         </div>
       );
     }

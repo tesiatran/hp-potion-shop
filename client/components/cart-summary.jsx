@@ -5,7 +5,7 @@ function CartSummary(props) {
   return (
     <div className="container">
       <div onClick={() => {
-        this.props.setView('catalog', {});
+        props.setView('catalog', {});
       }}>{props.backText}</div>
       <div>My Cart</div>
       <CartSummaryItem cartItemData={props.cartTotalData}/>
