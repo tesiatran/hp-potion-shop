@@ -77,7 +77,7 @@ export default class App extends React.Component {
             setView={this.setView}
             viewParams={this.state.view.params}
             backText="<Back to catalog"
-            addText="Add to Cart"
+            addText="Add to cart"
             addToCart={this.addToCart}/>
         </div>
       );
