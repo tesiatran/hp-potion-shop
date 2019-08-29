@@ -25,10 +25,10 @@ class ProductDetails extends React.Component {
       return null;
     } else {
       return (
-        <div className="container">
+        <div className="container col-12 text">
           <div onClick={() => {
             this.props.setView('catalog', {});
-          }}>{this.props.backText} </div>
+          }}>{this.props.backText}</div>
           <div className="row">
             <img src={this.state.product.image} className="col my-3"></img>
             <div className="col">
