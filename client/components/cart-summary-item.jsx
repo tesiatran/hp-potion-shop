@@ -2,7 +2,7 @@ import React from 'react';
 
 function CartSummaryItem(props) {
   return (
-    <div className="container col-12">
+    <div className="container col-12 text">
       <div className="card col-6 d-block mx-auto">
         <div className="row">
 

@@ -25,7 +25,7 @@ class ProductDetails extends React.Component {
       return null;
     } else {
       return (
-        <div className="container">
+        <div className="container col-12 text">
           <div onClick={() => {
             this.props.setView('catalog', {});
           }}>{this.props.backText}</div>
