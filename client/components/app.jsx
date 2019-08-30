@@ -90,14 +90,14 @@ export default class App extends React.Component {
     if (this.state.view.name === 'catalog') {
       return (
         <div className="container">
-          <Header text="Wicked Sales" cartItemCount={this.state.cart.length} setView={this.setView}/>
+          <Header nameText="Wicked Sales" cartItemCount={this.state.cart.length} setView={this.setView}/>
           <ProductList setView={this.setView}/>
         </div>
       );
     } else if (this.state.view.name === 'details') {
       return (
         <div className="container">
-          <Header text="Wicked Sales" cartItemCount={this.state.cart.length} setView={this.setView}/>
+          <Header nameText="Wicked Sales" cartItemCount={this.state.cart.length} setView={this.setView}/>
           <ProductDetails
             setView={this.setView}
             viewParams={this.state.view.params}
@@ -109,7 +109,7 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'cart') {
       return (
         <div className="container">
-          <Header text="Wicked Sales" cartItemCount={this.state.cart.length} setView={this.setView}/>
+          <Header nameText="Wicked Sales" cartItemCount={this.state.cart.length} setView={this.setView}/>
           <CartSummary cartTotalData={this.state.cart} setView={this.setView} backText="<Back to catalog"/>
         </div>
       );
