@@ -20,7 +20,10 @@ function CartSummary(props) {
             );
           })}
         </div>
-        <h1 className="my-5 col-6 mx-auto text-left">Total: ${(totalPrice * 0.01).toFixed(2)}</h1>
+        <div className="row my-5 col-6 mx-auto text-left">
+          <h1 className="col">Total: ${(totalPrice * 0.01).toFixed(2)}</h1>
+          <button className="col-4" onClick={() => { props.setView('checkout', {}); }}>Checkout</button>
+        </div>
       </div>
     );
   } else {
