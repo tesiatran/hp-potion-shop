@@ -11,4 +11,9 @@
     $json_output = json_encode($output["error"]);
     print($json_output);
   }
+
+  function startup()
+  {
+    header("Content-type:application/json");
+  }
 ?>
