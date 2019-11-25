@@ -12,7 +12,7 @@ function CartSummary(props) {
         <div onClick={() => {
           props.setView('catalog', {});
         }}>{props.backText}</div>
-        <h1 className="my-3 col-6 mx-auto text-left">My Cart</h1>
+        <h1 className="my-3 col-6 mx-auto text-left"><u>MY CART</u></h1>
         <div className="row my-3">
           {props.cartTotalData.map(item => {
             return (
@@ -20,7 +20,10 @@ function CartSummary(props) {
             );
           })}
         </div>
-        <h1 className="my-5 col-6 mx-auto text-left">Total: ${(totalPrice * 0.01).toFixed(2)}</h1>
+        <div className="row my-5 col-6 mx-auto text-left">
+          <h3 className="col">Subtotal: ${(totalPrice * 0.01).toFixed(2)}</h3>
+          <button className="col-4" onClick={() => { props.setView('checkout', {}); }}>Checkout</button>
+        </div>
       </div>
     );
   } else {
