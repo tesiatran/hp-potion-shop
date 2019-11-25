@@ -1,11 +1,17 @@
 <?php
 
-header('Content-Type: application/json');
+  require_once "functions.php";
 
-if (empty($_GET['id'])) {
-  readfile('dummy-products-list.json');
-} else {
-  readfile('dummy-product-details.json');
-}
+  set_exception_handler("error_handler");
+
+  require_once "db_connection.php";
+
+  if($conn) {
+    throw new Exception("ERROR: ", mysqli_connect_error());
+  };
+
+  $output = file_get_contents("dummy-products-list.json");
+
+  print($output);
 
 ?>
