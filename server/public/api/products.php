@@ -8,11 +8,11 @@
     throw new Exception("ERROR: " . mysqli_connect_error());
   };
 
-  $id = $_GET["id"];
 
-  if(empty($id)) {
+  if(!isset($_GET["id"])){
     $whereClause = "";
   } else {
+    $id = $_GET["id"];
     $whereClause = "WHERE `id`={$id}";
     if(!is_numeric($id)) {
       throw new Exception("The id needs to be a number.");
