@@ -27,3 +27,5 @@ Potion Shop is a full-stack LAMP & React shopping cart app.
 3. Open the `index.html` file and enjoy!
 
 ## Contributions
+
+I am always looking to improve and would love to hear from you! Please feel free to fork this repo and submit pull requests. You can also send any suggestions to [tesiatran88@gmail.com](mailto:tesiatran88@gmail.com).
