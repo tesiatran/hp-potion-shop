@@ -8,8 +8,8 @@ Potion Shop is a full-stack LAMP & React shopping cart app.
 
 ### Built with:
 
+- React
 - JavaScript
-- jQuery
 - CSS3
 - HTML5
 - PHP
