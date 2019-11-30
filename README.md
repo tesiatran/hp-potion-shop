@@ -19,10 +19,10 @@ Potion Shop is a full-stack LAMP & React shopping cart app.
 ## Initial Setup
 
 1. Fork this repository and clone the fork using your terminal.
-    - `git clone https://github.com/[Your User Name]/botw-shrine-tracker.git`
+    - `git clone https://github.com/[Your User Name]/hp-potion-tracker.git`
 
-2. Navigate to the `/botw-shrine-tracker` directory.
-    - `cd botw-shrine-tracker`
+2. Navigate to the `/hp-potion-tracker` directory.
+    - `cd hp-potion-tracker`
 
 3. Open the `index.html` file and enjoy!
 
