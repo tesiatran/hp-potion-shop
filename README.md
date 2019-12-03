@@ -4,7 +4,7 @@
 
 ## Project Details
 
-Potion Shop is a full-stack LAMP & React shopping cart app. You can find remedies for a variety of needs, including aches/pains, stress, insomnia. Browse items, add to cart, delete from cart, and checkout when ready!
+Potion Shop is a full-stack LAMP & React shopping cart app. You can find remedies for a variety of needs, including aches/pains, stress, insomnia, and more. Browse items, add to cart, delete from cart, and checkout when ready!
 
 ### Built with:
 
