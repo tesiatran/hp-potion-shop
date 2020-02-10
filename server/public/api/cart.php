@@ -2,6 +2,9 @@
 
 header('Content-Type: application/json');
 
+require_once("functions.php");
+require_once("db_connection.php");
+
 $method = $_SERVER['REQUEST_METHOD'];
 $item = file_get_contents('php://input');
 
