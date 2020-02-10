@@ -1,9 +1,9 @@
 <?php
 
-header('Content-Type: application/json');
-
 require_once('functions.php');
 require_once('db_connection.php');
+set_exception_handler('error_handler');
+startup();
 
 $method = $_SERVER['REQUEST_METHOD'];
 
