@@ -83,6 +83,6 @@ $cartQuery = "INSERT INTO `cartItems`
                   `cartItems.added` = NOW(),
                   `cartItems.cartID` = $cartID
               ON DUPLICATE KEY UPDATE `cartItems.count` = `cartItems.count` + $count";
-$cartResult = 
+$cartResult = mysqli_query($conn, $cartQuery);
 
 ?>
