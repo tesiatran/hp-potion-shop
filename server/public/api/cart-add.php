@@ -22,4 +22,10 @@ if ($jsonData['id']) {
   throw new Exception('ID is required to add to cart.');
 };
 
+if ($jsonData['count']) {
+  $count = $jsonData['count'];
+};
+
+
+
 ?>
