@@ -30,4 +30,11 @@ while ($row = mysqli_fetch_assoc($getQueryResult)) {
   $output[] = $row;
 }
 
+if ($output === []) {
+  print('[]');
+  exit();
+} else {
+  print(json_encode($output));
+}
+
 ?>
