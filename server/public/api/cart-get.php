@@ -25,4 +25,9 @@ if (!$getQueryResult) {
   throw new Exception('Failed to get');
 }
 
+$output = [];
+while ($row = mysqli_fetch_assoc($getQueryResult)) {
+  $output[] = $row;
+}
+
 ?>
