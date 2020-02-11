@@ -32,7 +32,7 @@ if (array_key_exists('cartID', $_SESSION)) {
   $cartID = false;
 };
 
-$priceQuery = "SELECT price FROM products WHERE products.id = $id";
+$priceQuery = "SELECT `price` FROM `products` WHERE `products.id` = $id";
 $priceResult = mysqli_error($conn, $priceQuery);
 
 if (!$priceResult) {
@@ -61,7 +61,7 @@ if (!$transactionResult) {
 };
 
 if ($cartID === false) {
-  $insertQuery = "INSERT INTO cart SET created = NOW()";
+  $insertQuery = "INSERT INTO `cart` SET `created` = NOW()";
   $insertResult = mysqli_query($conn, $insertQuery);
 }
 
