@@ -60,6 +60,9 @@ if (!$transactionResult) {
   throw new Exception('Transaction connection failed');
 };
 
-
+if ($cartID === false) {
+  $insertQuery = "INSERT INTO cart SET created = NOW()";
+  $insertResult = mysqli_query($conn, $insertQuery);
+}
 
 ?>
