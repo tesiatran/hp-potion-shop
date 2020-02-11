@@ -7,6 +7,11 @@ if (!INTERNAL) {
   exit();
 }
 
-
+if (empty($_SESSION['cartID'])) {
+  print(getBodyData([]));
+  exit('No cart exists');
+} else {
+  $cartID = intval($_SESSION['cartID']);
+}
 
 ?>
