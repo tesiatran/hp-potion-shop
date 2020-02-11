@@ -71,6 +71,9 @@ if ($cartID === false) {
   if (mysqli_affected_rows($conn) !== 1) {
     throw new Exception('Number of affected rows should be 1');
   }
+
+  $cartID = mysqli_insert_id($conn);
+  
 }
 
 ?>
