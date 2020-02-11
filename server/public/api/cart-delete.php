@@ -18,7 +18,7 @@ if ($jsonData['id']) {
   if (intval($id) < 1) {
     throw new Exception('ID must be a number greater than 0');
   }
-  $query = "DELETE FROM `cartItems` WHERE `productID` = " . $id;
+  $deleteQuery = "DELETE FROM `cartItems` WHERE `productID` = " . $id;
 } else if ($jsonData['cartID']) {
   $cartID = $jsonData['cartID'];
   if (gettype($cartID) !== 'integer') {
@@ -27,7 +27,7 @@ if ($jsonData['id']) {
   if (intval($cartID) < 1) {
     throw new Exception('ID must be a number greater than 0');
   }
-  $query = "DELETE FROM `cartItems` WHERE `cartID` = " . $cartID;
+  $deleteQuery = "DELETE FROM `cartItems` WHERE `cartID` = " . $cartID;
 } else {
   throw new Exception('ID is required to delete from cart');
 }
@@ -38,9 +38,9 @@ if (array_key_exists('cartID', $_SESSION)) {
   $cartID = false;
 }
 
-$result = mysqli_query($conn, $query);
+$deleteQueryResult = mysqli_query($conn, $deleteQuery);
 
-if (!$result) {
+if (!$deleteQueryResult) {
   throw new Exception('Failed to delete');
 }
 

@@ -33,13 +33,13 @@ if (array_key_exists('cartID', $_SESSION)) {
 }
 
 $priceQuery = "SELECT `price` FROM `products` WHERE `products.id` = $id";
-$priceResult = mysqli_error($conn, $priceQuery);
+$priceQueryResult = mysqli_error($conn, $priceQuery);
 
-if (!$priceResult) {
+if (!$priceQueryResult) {
   throw new Exception('Price connection failed');
 }
 
-$rowCount = mysqli_num_rows($priceResult);
+$rowCount = mysqli_num_rows($priceQueryResult);
 
 if ($rowCount === 0) {
   throw new Exception('Invalid product ID: ' . $id);
@@ -47,24 +47,24 @@ if ($rowCount === 0) {
 
 $productData = [];
 
-while ($row = mysqli_fetch_assoc($priceResult)) {
+while ($row = mysqli_fetch_assoc($priceQueryResult)) {
   $productData[] = $row;
 }
 
 $price = $productData[0]['price'];
 
 $transactionQuery = "START TRANSACTION";
-$transactionResult = mysqli_query($conn, $transactionQuery);
+$transactionQueryResult = mysqli_query($conn, $transactionQuery);
 
-if (!$transactionResult) {
+if (!$transactionQueryResult) {
   throw new Exception('Transaction connection failed');
 }
 
 if ($cartID === false) {
   $insertQuery = "INSERT INTO `cart` SET `created` = NOW()";
-  $insertResult = mysqli_query($conn, $insertQuery);
+  $insertQueryResult = mysqli_query($conn, $insertQuery);
 
-  if (!$insertResult) {
+  if (!$insertQueryResult) {
     throw new Exception('Insert connection failed');
   }
 
@@ -83,9 +83,9 @@ $cartQuery = "INSERT INTO `cartItems`
                   `cartItems.added` = NOW(),
                   `cartItems.cartID` = $cartID
               ON DUPLICATE KEY UPDATE `cartItems.count` = `cartItems.count` + $count";
-$cartResult = mysqli_query($conn, $cartQuery);
+$cartQueryResult = mysqli_query($conn, $cartQuery);
 
-if (!$cartResult) {
+if (!$cartQueryResult) {
   throw new Exception('Cart connection failed');
 }
 
