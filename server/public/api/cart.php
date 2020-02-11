@@ -9,7 +9,7 @@ startup();
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-switch($method) {
+switch ($method) {
   case 'GET':
     http_response_code(200);
     require_once('cart-get.php');
