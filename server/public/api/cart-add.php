@@ -5,7 +5,7 @@ require_once('functions.php');
 if (!INTERNAL) {
   print('Direct access is not allowed');
   exit();
-};
+}
 
 $item = file_get_contents('php://input');
 $jsonData = getBodyData($item);
@@ -20,36 +20,36 @@ if ($jsonData['id']) {
   }
 } else {
   throw new Exception('ID is required to add to cart');
-};
+}
 
 if ($jsonData['count']) {
   $count = $jsonData['count'];
-};
+}
 
 if (array_key_exists('cartID', $_SESSION)) {
   $cartID = $_SESSION['cartID'];
 } else {
   $cartID = false;
-};
+}
 
 $priceQuery = "SELECT `price` FROM `products` WHERE `products.id` = $id";
 $priceResult = mysqli_error($conn, $priceQuery);
 
 if (!$priceResult) {
   throw new Exception('Price connection failed');
-};
+}
 
 $rowCount = mysqli_num_rows($priceResult);
 
 if ($rowCount === 0) {
   throw new Exception('Invalid product ID: ' . $id);
-};
+}
 
 $productData = [];
 
 while ($row = mysqli_fetch_assoc($priceResult)) {
   $productData[] = $row;
-};
+}
 
 $price = $productData[0]['price'];
 
@@ -58,7 +58,7 @@ $transactionResult = mysqli_query($conn, $transactionQuery);
 
 if (!$transactionResult) {
   throw new Exception('Transaction connection failed');
-};
+}
 
 if ($cartID === false) {
   $insertQuery = "INSERT INTO `cart` SET `created` = NOW()";
@@ -74,7 +74,7 @@ if ($cartID === false) {
 
   $cartID = mysqli_insert_id($conn);
   $_SESSION['cartID'] = $cartID;
-};
+}
 
 $cartQuery = "INSERT INTO `cartItems`
               SET `cartItems.count` = $count,
@@ -87,7 +87,7 @@ $cartResult = mysqli_query($conn, $cartQuery);
 
 if (!$cartResult) {
   throw new Exception('Cart connection failed');
-};
+}
 
 if (mysqli_affected_rows($conn) < 1) {
   $rollback = "ROLLBACK";
@@ -96,6 +96,6 @@ if (mysqli_affected_rows($conn) < 1) {
 } else {
   $commit = "COMMIT";
   mysqli_query($conn, $commit);
-};
+}
 
 ?>
