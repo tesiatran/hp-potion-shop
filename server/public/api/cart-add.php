@@ -76,6 +76,13 @@ if ($cartID === false) {
   $_SESSION['cartID'] = $cartID;
 };
 
-
+$cartQuery = "INSERT INTO `cartItems`
+              SET `cartItems.count` = $count,
+                  `cartItems.productID` = $id,
+                  `cartItems.price` = $price,
+                  `cartItems.added` = NOW(),
+                  `cartItems.cartID` = $cartID
+              ON DUPLICATE KEY UPDATE `cartItems.count` = `cartItems.count` + $count";
+$cartResult = 
 
 ?>
