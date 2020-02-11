@@ -34,6 +34,7 @@ if (array_key_exists('cartID', $_SESSION)) {
   $cartID = false;
 }
 
-
+$updateQuery = "UPDATE `cartItems` SET count = {$count} WHERE `productID` = {$id}";
+$updateQueryResult = mysqli_query($conn, $updateQuery);
 
 ?>
