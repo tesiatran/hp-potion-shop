@@ -5,45 +5,37 @@
   set_exception_handler('error_handler');
   startup();
 
-  if(!$conn) {
-    throw new Exception("ERROR: " . mysqli_connect_error());
-  };
-
-
-  if(!isset($_GET["id"])){
+  if (empty($_GET['id'])) {
     $whereClause = "";
   } else {
-    $id = $_GET["id"];
-    $whereClause = "WHERE `id`={$id}";
+    $id = $_GET['id'];
+    $whereClause = "WHERE `products.id` = {$id}";
     if(!is_numeric($id)) {
-      throw new Exception("The id needs to be a number.");
+      throw new Exception('ID must be a number');
     }
   };
 
   $query = "SELECT * FROM `products`" . $whereClause;
-
   $result = mysqli_query($conn, $query);
 
-  if(!$result) {
+  if (!$result) {
     throw new Exception("ERROR: " . mysqli_error($conn));
     exit();
   }
 
   $rows = mysqli_num_rows($result);
 
-  if(!$rows) {
+  if (!$rows) {
     throw new Exception("Invalid ID: {$id}");
   }
 
-  $output = [
-    "success" => "true",
-    "data" => []
-  ];
+  $output = [];
 
-  while($product = mysqli_fetch_assoc($result)) {
-    $output["data"][] = $product;
+  while ($product = mysqli_fetch_assoc($result)) {
+    $output[] = $product;
   }
 
-  $json_output = json_encode($output["data"]);
+  $json_output = json_encode($output);
   print($json_output);
+
 ?>
