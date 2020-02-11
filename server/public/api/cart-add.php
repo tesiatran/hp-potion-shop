@@ -67,6 +67,10 @@ if ($cartID === false) {
   if (!$insertResult) {
     throw new Exception('Insert connection failed');
   }
+
+  if (mysqli_affected_rows($conn) !== 1) {
+    throw new Exception('Number of affected rows should be 1');
+  }
 }
 
 ?>
