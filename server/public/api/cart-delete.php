@@ -32,6 +32,12 @@ if ($jsonData['id']) {
   throw new Exception('ID is required to delete from cart');
 }
 
+if (array_key_exists('cartID', $_SESSION)) {
+  $cartID = $_SESSION['cartID'];
+} else {
+  $cartID = false;
+}
+
 
 
 ?>
