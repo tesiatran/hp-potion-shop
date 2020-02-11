@@ -28,6 +28,12 @@ if ($jsonData['count']) {
   throw new Exception('Could not get item count');
 }
 
+if (array_key_exists('cartID', $_SESSION)) {
+  $cartID = $_SESSION['cartID'];
+} else {
+  $cartID = false;
+}
+
 
 
 ?>
