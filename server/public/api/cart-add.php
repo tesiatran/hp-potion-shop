@@ -35,4 +35,10 @@ if (array_key_exists('cartID', $_SESSION)) {
 $priceQuery = "SELECT price FROM products WHERE products.id = $id";
 $priceResult = mysqli_error($conn, $priceQuery);
 
+if (!$priceResult) {
+  throw new Exception('Price connection failed.');
+};
+
+
+
 ?>
