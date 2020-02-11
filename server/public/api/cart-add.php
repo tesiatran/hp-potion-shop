@@ -3,7 +3,7 @@
 require_once('functions.php');
 
 if (!INTERNAL) {
-  print('Direct access is not allowed.');
+  print('Direct access is not allowed');
   exit();
 };
 
@@ -13,13 +13,13 @@ $jsonData = getBodyData($item);
 if ($jsonData['id']) {
   $id = $jsonData['id'];
   if (gettype($id) !== 'integer') {
-    throw new Exception('ID must be a number.');
+    throw new Exception('ID must be a number');
   }
   if (intval($id) < 1) {
-    throw new Exception('ID must be a number greater than 0.');
+    throw new Exception('ID must be a number greater than 0');
   }
 } else {
-  throw new Exception('ID is required to add to cart.');
+  throw new Exception('ID is required to add to cart');
 };
 
 if ($jsonData['count']) {
@@ -36,9 +36,13 @@ $priceQuery = "SELECT price FROM products WHERE products.id = $id";
 $priceResult = mysqli_error($conn, $priceQuery);
 
 if (!$priceResult) {
-  throw new Exception('Price connection failed.');
+  throw new Exception('Price connection failed');
 };
 
+$rowCount = mysqli_num_rows($priceResult);
 
+if ($rowCount === 0) {
+  throw new Exception('Invalid product ID: ' . $id);
+}
 
 ?>
