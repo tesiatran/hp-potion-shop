@@ -21,7 +21,13 @@ if ($jsonData['id']) {
   $query = "DELETE FROM `cartItems` WHERE `productID` = " . $id;
 } else if ($jsonData['cartID']) {
   $cartID = $jsonData['cartID'];
-  if
+  if (gettype($cartID) !== 'integer') {
+    throw new Exception('ID must be a number');
+  }
+  if (intval($cartID) < 1) {
+    throw new Exception('ID must be a number greater than 0');
+  }
+  $query = "DELETE FROM `cartItems` WHERE `cartID` = " . $cartID;
 }
 
 ?>
