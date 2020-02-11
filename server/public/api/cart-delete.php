@@ -28,6 +28,10 @@ if ($jsonData['id']) {
     throw new Exception('ID must be a number greater than 0');
   }
   $query = "DELETE FROM `cartItems` WHERE `cartID` = " . $cartID;
+} else {
+  throw new Exception('ID is required to delete from cart');
 }
+
+
 
 ?>
