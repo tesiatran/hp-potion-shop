@@ -89,6 +89,13 @@ if (!$cartResult) {
   throw new Exception('Cart connection failed');
 };
 
-
+if (mysqli_affected_rows($conn) < 1) {
+  $rollback = "ROLLBACK";
+  mysqli_query($conn, $rollback);
+  throw new Exception('Number of affected rows is not equal to at least 1');
+} else {
+  $commit = "COMMIT";
+  mysqli_query($conn, $commit);
+};
 
 ?>
