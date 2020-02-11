@@ -73,7 +73,9 @@ if ($cartID === false) {
   }
 
   $cartID = mysqli_insert_id($conn);
-  
-}
+  $_SESSION['cartID'] = $cartID;
+};
+
+
 
 ?>
