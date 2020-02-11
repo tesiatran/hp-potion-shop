@@ -85,4 +85,10 @@ $cartQuery = "INSERT INTO `cartItems`
               ON DUPLICATE KEY UPDATE `cartItems.count` = `cartItems.count` + $count";
 $cartResult = mysqli_query($conn, $cartQuery);
 
+if (!$cartResult) {
+  throw new Exception('Cart connection failed');
+};
+
+
+
 ?>
