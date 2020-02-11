@@ -56,6 +56,10 @@ $price = $productData[0]['price'];
 $transactionQuery = "START TRANSACTION";
 $transactionResult = mysqli_query($conn, $transactionQuery);
 
+if (!$transactionResult) {
+  throw new Exception('Transaction connection failed');
+};
+
 
 
 ?>
