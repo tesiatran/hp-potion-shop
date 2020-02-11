@@ -54,5 +54,8 @@ while ($row = mysqli_fetch_assoc($priceResult)) {
 $price = $productData[0]['price'];
 
 $transactionQuery = "START TRANSACTION";
+$transactionResult = mysqli_query($conn, $transactionQuery);
+
+
 
 ?>
