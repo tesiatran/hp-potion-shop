@@ -38,6 +38,10 @@ if (array_key_exists('cartID', $_SESSION)) {
   $cartID = false;
 }
 
+$result = mysqli_query($conn, $query);
 
+if (!$result) {
+  throw new Exception('Failed to delete');
+}
 
 ?>
