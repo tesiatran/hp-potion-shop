@@ -12,10 +12,16 @@ $jsonData = getBodyData($item);
 
 if ($jsonData['id']) {
   $id = $jsonData['id'];
-
-  if (intval($id) < 1) {
-    throw new Exception('ID must be greater than 0');
+  if (gettype($id) !== 'integer') {
+    throw new Exception('ID must be a number');
   }
+  if (intval($id) < 1) {
+    throw new Exception('ID must be a number greater than 0');
+  }
+  $query = "DELETE FROM `cartItems` WHERE `productID` = " . $id;
+} else if ($jsonData['cartID']) {
+  $cartID = $jsonData['cartID'];
+  if
 }
 
 ?>
