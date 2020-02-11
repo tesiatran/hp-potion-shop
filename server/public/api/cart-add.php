@@ -43,6 +43,14 @@ $rowCount = mysqli_num_rows($priceResult);
 
 if ($rowCount === 0) {
   throw new Exception('Invalid product ID: ' . $id);
-}
+};
+
+$productData = [];
+
+while ($row = mysqli_fetch_assoc($priceResult)) {
+  $productData[] = $row;
+};
+
+$price = $productData[0]['price'];
 
 ?>
