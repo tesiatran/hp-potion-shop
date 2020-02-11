@@ -7,6 +7,7 @@ if (!INTERNAL) {
   exit();
 }
 
-
+$item = file_get_contents('php://input');
+$jsonData = getBodyData($item);
 
 ?>
