@@ -22,7 +22,7 @@ $getQuery = "SELECT cartItems.cartID, cartItems.count, cartItems.price, products
 $getQueryResult = mysqli_query($conn, $getQuery);
 
 if (!$getQueryResult) {
-  throw new Exception('')
+  throw new Exception('Failed to get');
 }
 
 ?>
