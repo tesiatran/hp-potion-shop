@@ -8,5 +8,14 @@ if (!INTERNAL) {
 }
 
 $item = file_get_contents('php://input');
+$jsonData = getBodyData($item);
+
+if ($jsonData['id']) {
+  $id = $jsonData['id'];
+
+  if (intval($id) < 1) {
+    throw new Exception('ID must be greater than 0');
+  }
+}
 
 ?>
