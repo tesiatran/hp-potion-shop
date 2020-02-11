@@ -37,4 +37,8 @@ if (array_key_exists('cartID', $_SESSION)) {
 $updateQuery = "UPDATE `cartItems` SET count = {$count} WHERE `productID` = {$id}";
 $updateQueryResult = mysqli_query($conn, $updateQuery);
 
+if (!$updateQueryResult) {
+  throw new Exception('Failed to update');
+}
+
 ?>
