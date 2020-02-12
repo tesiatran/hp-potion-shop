@@ -34,9 +34,9 @@
 
   $output = [];
 
-  // while ($product = mysqli_fetch_assoc($result)) {
-  //   $output[] = $product;
-  // }
+  while ($product = mysqli_fetch_assoc($result)) {
+    $output[] = $product;
+  }
 
   // $json_output = json_encode($output);
   // print($json_output);
