@@ -2,17 +2,19 @@
   {
     "id": 3,
     "count": 1,
-    "name": "Snuggie",
-    "price": 2900,
-    "image": "https://bit.ly/2LVHYAk",
-    "shortDescription": "Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!"
+    "name": "Flight Deck",
+    "brand": "Oakley",
+    "price": 20000,
+    "description": "Flight Deck snow goggles.",
+    "image": ".images/products/oakley-flight-deck.jpg"
   },
   {
     "id": 5,
     "count": 2,
-    "name": "Ostrich Pillow",
-    "price": 9900,
-    "image": "https://bit.ly/2VD80b8",
-    "shortDescription": "Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow."
+    "name": "Skyline",
+    "brand": "Smith",
+    "price": 17000,
+    "description": "Skyline snow goggles.",
+    "image": ".images/products/smith-skyline.jpg"
   }
 ]

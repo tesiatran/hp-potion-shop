@@ -1,44 +1,162 @@
 [
   {
     "id": 1,
-    "name": "Shake Weight",
-    "price": 2999,
-    "image": "https://bit.ly/2JtVNE6",
-    "shortDescription": "Dynamic Inertia technology ignites muscles in arms, shoulders, and chest."
+    "name": "Airbrake",
+    "brand": "Oakley",
+    "price": 24000,
+    "description": "Airbrake snow goggles.",
+    "image": ".images/products/oakley-airbrake.jpg"
   },
   {
     "id": 2,
-    "name": "ShamWow",
-    "price": 2595,
-    "image": "https://bit.ly/2w9C3Nm",
-    "shortDescription": "It's like a chamois, towel, and sponge, all in one! Soaks up to 10x it's weight in any liquid!"
+    "name": "Canopy",
+    "brand": "Oakley",
+    "price": 18000,
+    "description": "Canopy snow goggles.",
+    "image": ".images/products/oakley-canopy.jpg"
   },
   {
     "id": 3,
-    "name": "Snuggie",
-    "price": 2900,
-    "image": "https://bit.ly/2LVHYAk",
-    "shortDescription": "Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!"
+    "name": "Flight Deck",
+    "brand": "Oakley",
+    "price": 20000,
+    "description": "Flight Deck snow goggles.",
+    "image": ".images/products/oakley-flight-deck.jpg"
   },
   {
     "id": 4,
-    "name": "Wax Vac",
-    "price": 999,
-    "image": "https://bit.ly/2EjCU2a",
-    "shortDescription": "Gentle way to remove ear wax. Safe and hygienic. Reduces the risk of painful infections."
+    "name": "Line Miner",
+    "brand": "Oakley",
+    "price": 15000,
+    "description": "Line Miner snow goggles.",
+    "image": ".images/products/oakley-line-miner.jpg"
   },
   {
     "id": 5,
-    "name": "Ostrich Pillow",
-    "price": 9900,
-    "image": "https://bit.ly/2VD80b8",
-    "shortDescription": "Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow."
+    "name": "Skyline",
+    "brand": "Smith",
+    "price": 17000,
+    "description": "Skyline snow goggles.",
+    "image": ".images/products/smith-skyline.jpg"
   },
   {
     "id": 6,
-    "name": "Tater Mitts",
-    "price": 830,
-    "image": "https://bit.ly/2w9EmzO",
-    "shortDescription": "8 Seconds is All You Need with Tater Mitts Quickly and easily prepare all your favorite potato dishes with Tater Mitts."
+    "name": "Virtue",
+    "brand": "Smith",
+    "price": 14000,
+    "description": "Virtue snow goggles.",
+    "image": ".images/products/smith-virtue.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Squad",
+    "brand": "Smith",
+    "price": 11000,
+    "description": "Squad snow goggles.",
+    "image": ".images/products/smith-squad.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Riot",
+    "brand": "Smith",
+    "price": 10000,
+    "description": "Riot snow goggles.",
+    "image": ".images/products/smith-riot.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Bravo",
+    "brand": "Spy",
+    "price": 22000,
+    "description": "Bravo snow goggles.",
+    "image": ".images/products/spy-bravo.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Marshall",
+    "brand": "Spy",
+    "price": 14000,
+    "description": "Marshall snow goggles.",
+    "image": ".images/products/spy-marshall.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Ace",
+    "brand": "Spy",
+    "price": 13000,
+    "description": "Ace snow goggles.",
+    "image": ".images/products/spy-ace.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Raider",
+    "brand": "Spy",
+    "price": 10000,
+    "description": "Raider snow goggles.",
+    "image": ".images/products/spy-raider.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Sync",
+    "brand": "Anon",
+    "price": 19000,
+    "description": "Sync snow goggles.",
+    "image": ".images/products/anon-sync.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Tempest",
+    "brand": "Anon",
+    "price": 15000,
+    "description": "Tempest snow goggles.",
+    "image": ".images/products/anon-tempest.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Deringer",
+    "brand": "Anon",
+    "price": 12000,
+    "description": "Deringer snow goggles.",
+    "image": ".images/products/anon-deringer.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Insight",
+    "brand": "Anon",
+    "price": 10000,
+    "description": "Insight snow goggles.",
+    "image": ".images/products/anon-insight.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Diva Drama",
+    "brand": "Blenders",
+    "price": 9500,
+    "description": "Diva Drama snow goggles.",
+    "image": ".images/products/blenders-diva-drama.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Dream Maker",
+    "brand": "Blenders",
+    "price": 9500,
+    "description": "Dream Maker snow goggles.",
+    "image": ".images/products/blenders-dream-maker.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Majestic Bloom",
+    "brand": "Blenders",
+    "price": 9500,
+    "description": "Majestic Bloom snow goggles.",
+    "image": ".images/products/blenders-majestic-bloom.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Smooth Arrival",
+    "brand": "Blenders",
+    "price": 9500,
+    "description": "Smooth Arrival snow goggles.",
+    "image": ".images/products/blenders-smooth-arrival.jpg"
   }
 ]
