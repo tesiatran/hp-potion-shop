@@ -7,18 +7,18 @@ if (!INTERNAL) {
   exit();
 }
 
-if (empty($_SESSION['cartID'])) {
+if (empty($_SESSION['cart_id'])) {
   print(getBodyData([]));
   exit('No cart exists');
 } else {
-  $cartID = intval($_SESSION['cartID']);
+  $cartID = intval($_SESSION['cart_id']);
 }
 
-$getQuery = "SELECT `cartItems.cartID`, `cartItems.count`, `cartItems.price`, `products.id`, `products.name`, `products.image`, `products.shortDescription`, `products.longDescription`
-          FROM `cartItems`
+$getQuery = "SELECT `cart_items.cart_id`, `cart_items.count`, `cart_items.price`, `products.id`, `products.name`, `products.brand`, `products.description`, `products.image`
+          FROM `cart_items`
           INNER JOIN `products`
-          ON `cartItems.productID` = `products.id`
-          WHERE `cartItems.cartID` = {$cartID}";
+          ON `cart_items.product_id` = `products.id`
+          WHERE `cart_items.cart_id` = {$cartID}";
 $getQueryResult = mysqli_query($conn, $getQuery);
 
 if (!$getQueryResult) {
