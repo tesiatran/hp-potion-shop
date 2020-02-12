@@ -9,7 +9,7 @@
     $whereClause = "";
   } else {
     $id = $_GET['id'];
-    $whereClause = "WHERE `products.id` = {$id}";
+    $whereClause = "WHERE products.id = {$id}";
     if(!is_numeric($id)) {
       throw new Exception('ID must be a number');
     }
