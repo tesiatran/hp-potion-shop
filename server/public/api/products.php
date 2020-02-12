@@ -5,6 +5,9 @@
   set_exception_handler('error_handler');
   startUp();
 
+  $query = "SELECT * FROM `products`";
+  $result = mysqli_query($conn, $query);
+
   // if (empty($_GET['id'])) {
   //   $whereClause = "";
   // } else {
@@ -38,7 +41,8 @@
   // $json_output = json_encode($output);
   // print($json_output);
 
-  $output = file_get_contents('dummy-products-list.json');
-  print($output);
+
+  // $output = file_get_contents('dummy-products-list.json');
+  // print($output);
 
 ?>
