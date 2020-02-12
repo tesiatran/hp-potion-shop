@@ -13,8 +13,9 @@ function CartSummaryItem(props) {
           <div className="col">
             <div className="card-body">
               <div className="card-title justify-content-start productName my-3">{props.cartItemData.name}</div>
+              <div className="card-text justify-content-start my-3">{props.cartItemData.brand}</div>
               <div className="card-text justify-content-start my-3">${(props.cartItemData.price * 0.01).toFixed(2)}</div>
-              <div className="card-text justify-content-start my-3">{props.cartItemData.shortDescription}</div>
+              <div className="card-text justify-content-start my-3">{props.cartItemData.description}</div>
             </div>
           </div>
 
