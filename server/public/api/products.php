@@ -8,6 +8,10 @@
   $query = "SELECT * FROM `products`";
   $result = mysqli_query($conn, $query);
 
+  if (!$result) {
+    throw new Exception("ERROR: " . mysqli_error($conn));
+  }
+
   // if (empty($_GET['id'])) {
   //   $whereClause = "";
   // } else {
