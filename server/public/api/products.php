@@ -32,14 +32,17 @@
   //   throw new Exception("Invalid ID: {$id}");
   // }
 
-  $output = [];
+  $output = [
+    'success' => 'true',
+    'data' => []
+  ];
 
   while ($product = mysqli_fetch_assoc($result)) {
-    $output[] = $product;
+    $output['data'][] = $product;
   }
 
-  // $json_output = json_encode($output);
-  // print($json_output);
+  $json_output = json_encode($output);
+  print($json_output);
 
 
   // $output = file_get_contents('dummy-products-list.json');
