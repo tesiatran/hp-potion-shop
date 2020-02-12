@@ -10,8 +10,8 @@ function ProductListItem(props) {
       <img src={props.productData.image} className="card-img-top my-2"></img>
       <div className="card-body">
         <div className="card-title font-weight-bold my-1">{props.productData.name}</div>
+        <div className="card-text my-1">{props.productData.brand}</div>
         <div className="card-text my-1">${(props.productData.price * 0.01).toFixed(2)}</div>
-        <div className="card-text my-1">{props.productData.shortDescription}</div>
       </div>
     </div>
   );

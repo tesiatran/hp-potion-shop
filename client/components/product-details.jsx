@@ -36,10 +36,10 @@ class ProductDetails extends React.Component {
                 <div className="col justify-content-start productName my-3">{this.state.product.name}</div>
               </div>
               <div className="row">
-                <div className="col justify-content-start my-3">${(this.state.product.price * 0.01).toFixed(2)}</div>
+                <div className="col justify-content-start my-3">${this.state.product.brand}</div>
               </div>
               <div className="row">
-                <div className="col justify-content-start my-3">{this.state.product.shortDescription}</div>
+                <div className="col justify-content-start my-3">${(this.state.product.price * 0.01).toFixed(2)}</div>
               </div>
               <div className="row">
                 <button className="col justify-content-start my-3" onClick={() => { this.props.addToCart(this.state.product); }}>{this.props.addText}</button>
@@ -47,7 +47,7 @@ class ProductDetails extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col my-3">{this.state.product.longDescription}</div>
+            <div className="col my-3">{this.state.product.description}</div>
           </div>
         </div>
       );
