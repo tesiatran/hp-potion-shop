@@ -28,13 +28,13 @@ if ($jsonData['count']) {
   throw new Exception('Could not get item count');
 }
 
-if (array_key_exists('cartID', $_SESSION)) {
-  $cartID = $_SESSION['cartID'];
+if (array_key_exists('cart_id', $_SESSION)) {
+  $cartID = $_SESSION['cart_id'];
 } else {
   $cartID = false;
 }
 
-$updateQuery = "UPDATE `cartItems` SET count = {$count} WHERE `productID` = {$id}";
+$updateQuery = "UPDATE `cart_items` SET count = {$count} WHERE `product_id` = {$id}";
 $updateQueryResult = mysqli_query($conn, $updateQuery);
 
 if (!$updateQueryResult) {
