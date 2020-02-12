@@ -12,7 +12,7 @@
     print($json_output);
   }
 
-  function startup() {
+  function startUp() {
     header("Content-type:application/json");
   }
 
