@@ -18,22 +18,22 @@ if ($jsonData['id']) {
   if (intval($id) < 1) {
     throw new Exception('ID must be a number greater than 0');
   }
-  $deleteQuery = "DELETE FROM `cartItems` WHERE `productID` = " . $id;
-} else if ($jsonData['cartID']) {
-  $cartID = $jsonData['cartID'];
+  $deleteQuery = "DELETE FROM `cart_items` WHERE `product_id` = " . $id;
+} else if ($jsonData['cart_id']) {
+  $cartID = $jsonData['cart_id'];
   if (gettype($cartID) !== 'integer') {
     throw new Exception('ID must be a number');
   }
   if (intval($cartID) < 1) {
     throw new Exception('ID must be a number greater than 0');
   }
-  $deleteQuery = "DELETE FROM `cartItems` WHERE `cartID` = " . $cartID;
+  $deleteQuery = "DELETE FROM `cart_items` WHERE `cart_id` = " . $cartID;
 } else {
   throw new Exception('ID is required to delete from cart');
 }
 
-if (array_key_exists('cartID', $_SESSION)) {
-  $cartID = $_SESSION['cartID'];
+if (array_key_exists('cart_id', $_SESSION)) {
+  $cartID = $_SESSION['cart_id'];
 } else {
   $cartID = false;
 }
