@@ -10,6 +10,7 @@
 
   if (!$result) {
     throw new Exception("ERROR: " . mysqli_error($conn));
+    exit();
   }
 
   // if (empty($_GET['id'])) {
@@ -25,18 +26,13 @@
   // $query = "SELECT * FROM `products`" . $whereClause;
   // $result = mysqli_query($conn, $query);
 
-  // if (!$result) {
-  //   throw new Exception("ERROR: " . mysqli_error($conn));
-  //   exit();
-  // }
-
   // $rows = mysqli_num_rows($result);
 
   // if (!$rows) {
   //   throw new Exception("Invalid ID: {$id}");
   // }
 
-  // $output = [];
+  $output = [];
 
   // while ($product = mysqli_fetch_assoc($result)) {
   //   $output[] = $product;
