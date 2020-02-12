@@ -26,8 +26,8 @@ if ($jsonData['count']) {
   $count = $jsonData['count'];
 }
 
-if (array_key_exists('cartID', $_SESSION)) {
-  $cartID = $_SESSION['cartID'];
+if (array_key_exists('cart_id', $_SESSION)) {
+  $cartID = $_SESSION['cart_id'];
 } else {
   $cartID = false;
 }
@@ -73,16 +73,16 @@ if ($cartID === false) {
   }
 
   $cartID = mysqli_insert_id($conn);
-  $_SESSION['cartID'] = $cartID;
+  $_SESSION['cart_id'] = $cartID;
 }
 
-$cartQuery = "INSERT INTO `cartItems`
-              SET `cartItems.count` = $count,
-                  `cartItems.productID` = $id,
-                  `cartItems.price` = $price,
-                  `cartItems.added` = NOW(),
-                  `cartItems.cartID` = $cartID
-              ON DUPLICATE KEY UPDATE `cartItems.count` = `cartItems.count` + $count";
+$cartQuery = "INSERT INTO `cart_items`
+              SET `cart_items.count` = $count,
+                  `cart_items.product_id` = $id,
+                  `cart_items.price` = $price,
+                  `cart_items.added` = NOW(),
+                  `cart_items.cart_id` = $cartID
+              ON DUPLICATE KEY UPDATE `cart_items.count` = `cart_items.count` + $count";
 $cartQueryResult = mysqli_query($conn, $cartQuery);
 
 if (!$cartQueryResult) {
