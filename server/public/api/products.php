@@ -8,6 +8,8 @@
   $query = "SELECT * FROM `products`";
   $result = mysqli_query($conn, $query);
 
+  // var_dump($result);
+
   if (!$result) {
     throw new Exception("ERROR: " . mysqli_error($conn));
     exit();
@@ -36,6 +38,8 @@
     'success' => 'true',
     'data' => []
   ];
+
+  // var_dump($output);
 
   while ($product = mysqli_fetch_assoc($result)) {
     $output['data'][] = $product;
