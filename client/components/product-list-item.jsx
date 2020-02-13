@@ -6,7 +6,7 @@ function ProductListItem(props) {
       onClick={() => {
         props.setView('details', { 'id': props.productData.id });
       }}
-      className="card col-3 mx-2 my-2 text">
+      className="card col-2 mx-2 my-2 text">
       <img src={props.productData.image} className="card-img-top my-2"></img>
       <div className="card-body">
         <div className="card-title font-weight-bold my-1">{props.productData.name}</div>
