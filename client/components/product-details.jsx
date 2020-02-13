@@ -36,7 +36,7 @@ class ProductDetails extends React.Component {
                 <div className="col justify-content-start productName my-3">{this.state.product.name}</div>
               </div>
               <div className="row">
-                <div className="col justify-content-start my-3">${this.state.product.brand}</div>
+                <div className="col justify-content-start my-3">{this.state.product.brand}</div>
               </div>
               <div className="row">
                 <div className="col justify-content-start my-3">${(this.state.product.price * 0.01).toFixed(2)}</div>
