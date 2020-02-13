@@ -5,6 +5,8 @@
   set_exception_handler("error_handler");
   startUp();
 
+  // mysqli_set_charset($conn, "utf8");
+
   if (empty($_GET["id"])) {
     $whereClause = "";
   } else if (is_numeric($_GET["id"])) {
@@ -31,11 +33,8 @@
     }
   }
 
-  // print_r($output);
-
-  print(json_encode($output));
-
-  // print_r($output);
+  $json = json_encode($output);
+  print($json);
 
   // $output = file_get_contents('dummy-products-list.json');
   // print($output);
