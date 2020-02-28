@@ -40,7 +40,7 @@ Disclaimer: Please note that this site is for demonstration purposes only. No re
 4. Import the example database to MySQL.
 
     ```shell
-    database/snow-optics.sql
+    database/snow_optics.sql
     ```
 
 5. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
