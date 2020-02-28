@@ -1,42 +1,53 @@
-# Potion Shop
+# Snow Optics
 
-[Live Site](http://potions.tesiatran.com/)
-
-## Project Details
-
-Potion Shop is a full-stack LAMP & React shopping cart app. Inspired by J.K. Rowling's wizarding world, the shop has unique "potions" meant for all Witches, Wizards, and even Muggles. You can find remedies for a variety of needs, including aches/pains, stress, insomnia, and more. Browse items, add to cart, delete from cart, and checkout when ready!
+An e-commerce site inspired by my love of snow sports. Browse for your favorite pair of goggles, add them to your cart, then place an order when you're ready!
 
 Disclaimer: Please note that this site is for demonstration purposes only. No real products are being sold. Do not enter real information upon checkout.
 
-### Built with:
+### [Live Demo](http://snowoptics.tesiatran.com/)
 
-- React
+## Technologies Used:
+
 - JavaScript
+- React
+- Bootstrap 4
 - CSS3
 - HTML5
-- MySQL + phpMyAdmin
-- Bootstrap 4
 - PHP
+- MySQL
+- phpMyAdmin
 
-## Initial Setup
+## Getting Started:
 
 1. Fork this repository and clone the fork using your terminal.
-    - `git clone https://github.com/[Your User Name]/hp-potion-tracker.git`
 
-2. Navigate to the `/hp-potion-tracker` directory.
-    - `cd hp-potion-tracker`
+    ```shell
+    git clone https://github.com/[your username]/snow-optics.git
+    ```
+
+2. Navigate to the project directory.
+
+    ```shell
+    cd snow-optics
+    ```
 
 3. Install the necessary dependencies.
-    - `npm install`
 
-4. Start your dev environment with Apache2 and MySQL.
-    - `sudo service apache2 start`
-    - `sudo service mysqld start`
+    ```shell
+    npm install
+    ```
 
-5. Initiate the dev server.
-    - `npm run dev`
+4. Import the example database to MySQL.
 
-6. Go to `localhost:3000` in your browser and enjoy!
+    ```shell
+    database/snow-optics.sql
+    ```
+
+5. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
+
+    ```shell
+    npm run dev
+    ```
 
 ## Contributions
 
