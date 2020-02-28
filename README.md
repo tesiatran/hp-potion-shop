@@ -19,10 +19,10 @@ Disclaimer: Please note that this site is for demonstration purposes only. No re
 
 ## Getting Started:
 
-1. Fork this repository and clone the fork using your terminal.
+1. Clone the repository.
 
     ```shell
-    git clone https://github.com/[your username]/snow-optics.git
+    git clone https://github.com/tesiatran/snow-optics.git
     ```
 
 2. Navigate to the project directory.
@@ -31,7 +31,7 @@ Disclaimer: Please note that this site is for demonstration purposes only. No re
     cd snow-optics
     ```
 
-3. Install the necessary dependencies.
+3. Install all dependencies with npm.
 
     ```shell
     npm install
