@@ -2,7 +2,7 @@
 
 An e-commerce site inspired by my love of snow sports. Browse for your favorite pair of goggles, add them to your cart, then place an order when you're ready!
 
-Disclaimer: Please note that this site is for demonstration purposes only. No real products are being sold. Do not enter real information upon checkout.
+Disclaimer: This site is for demonstration purposes only. No real products are being sold. Please do not enter real information upon checkout.
 
 ### [Live Demo](http://snowoptics.tesiatran.com/)
 
